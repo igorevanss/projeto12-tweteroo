@@ -20,7 +20,7 @@ app.post('/tweets', (req, res) => {
   const { username, tweet } = req.body
 
   if (!username) {
-    res.status(401).send({ error: 'UNAUTHORIZED' })
+    res.send({ error: 'UNAUTHORIZED' })
   }
 
   const { avatar } = users.find(user => user.username === username)
